@@ -1,0 +1,129 @@
+*, 
+*::before, 
+*::after {
+  box-sizing: border-box;
+}
+
+ul[class], 
+ol[class] {
+  padding: 0;
+  list-style: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.3;
+  font-style: normal;
+  font-weight: 700;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: $text-common-black;
+  transition: all 0.3s linear;
+  user-select: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button:focus {
+  outline: none;
+}
+a {
+  transition: all 0.3s linear;
+}
+a, a:hover {
+  text-decoration: none;
+}
+/*** Chrome, Safari, Edge, Opera ***/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/*** Firefox ***/
+input[type=number] {
+  -moz-appearance:textfield;
+}
+
+.probono-title-h3 {
+  margin-bottom: 32px;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.probono-title-h4 {
+  margin: 26px 0 16px 0;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.probono-text {
+  font-weight: 400;
+  font-size: 16px;
+
+  &:not(:last-of-type) {
+    margin-bottom: 25px;
+  }
+}
+
+.probono-contacts {
+  display: flex;
+  flex-direction: column;
+  margin-top: 55px;
+}
+
+.probono-link-contact {
+  font-weight: 700;
+  font-size: 18px;
+  color: $text-common-black;
+
+  & span {
+    font-weight: 400;
+  }
+
+  &:hover {
+    color: $text-gold-hover;
+  }
+}
+
+.probono-buttons {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 26px;
+}
+
+.probono-button {
+  padding: 25px 79px;
+  max-width: 420px;
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
+  color: $text-white;
+  border: 3px solid $background-gold;
+  background-color: $background-gold;
+
+  &:hover {
+    color: $text-gold;
+    background-color: $background-white;
+  }
+}

@@ -1,0 +1,15 @@
+.story-subscribe {
+	margin-top: 70px;
+	padding-left: 100px;
+	width: 100%;
+	max-width: 1440px;
+
+	&__title {
+		margin: 60px 0 15px 0;
+	}
+
+	&__text {
+		margin-bottom:  15px;
+		color: $text-grey;
+	}
+}
