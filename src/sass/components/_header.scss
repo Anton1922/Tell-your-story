@@ -1,0 +1,49 @@
+.story-header {
+
+	&__container-image {
+		position: relative;
+		margin: 0 auto;
+		max-width: 1440px;
+	}
+
+	&__image {
+		z-index: 0;
+		width: 100%;
+	}
+
+	&__container-text {
+		z-index: 100;
+		position: absolute;
+		left: 184px;
+		bottom: 61px;
+		margin: 0 auto;
+		max-width: 1126px;
+	}
+
+	&__title {
+		margin-bottom: 13px;
+		font-family: 'Roboto';
+		font-weight: 500;
+		font-size: 48px;
+		line-height: 1.17;
+		color: $text-white;
+	}
+
+	&__description {
+		font-family: 'IBM Plex Sans';
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 1.31;
+		color: #FFFFFF;
+	}
+
+	&__filter {
+		z-index: 50;
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		background: linear-gradient(360deg, #1d1d1d 0%, rgba(22, 22, 22, 0.494792) 14.48%, rgba(97, 97, 97, 0) 28.66%);
+	}
+}
