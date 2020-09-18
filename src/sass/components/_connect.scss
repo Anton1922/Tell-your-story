@@ -1,0 +1,88 @@
+.story-connect {
+	margin: 42px auto 0;
+	max-width: 1126px;
+
+	&__title {
+		margin-bottom: 60px;
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 1.25;
+		color: $text-common-black;
+	}
+
+	&__container-buttons {
+		display: flex;
+		justify-content: center;
+	}
+
+	&__button {
+		position: relative;
+		padding: 45px 0 0 37px;
+		width: 296px;
+		height: 176px;
+		font-family: 'Source Sans Pro';
+		font-style: normal;
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 1.25;
+		color: $text-common-black;
+		background-color: $background-grey;
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 4%;
+			background-color: $background-gold;
+			transition: all 0.2s linear;
+		}
+
+		&:hover::before {
+			height: 16%;
+		}
+
+		& span {
+			display: inline-block;
+			margin-top: 13px;
+			max-height: 54px;
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 1.29;
+		}
+
+		&:nth-of-type(2) {
+			margin: 0 80px;
+		}
+	}
+
+	&__container-contacts {
+		display: flex;
+		justify-content: center;
+		margin-top: 55px;
+	}
+
+	&__contacts {
+		display: flex;
+	  flex-direction: column;
+
+	  &-phone {
+	  	margin-bottom: 5px;
+	  }
+
+	  &-item {
+	  	font-weight: 700;
+		  font-size: 18px;
+		  color: $text-common-black;
+
+		  & span {
+		    font-weight: 400;
+		  }
+
+		  &:hover {
+		    color: $text-gold-hover;
+		  }
+	  }
+	}
+}
