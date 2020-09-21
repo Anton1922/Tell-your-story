@@ -64,7 +64,10 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance:textfield;
 }
-
+.story-content {
+  margin: 0 auto;
+  max-width: 1126px;
+}
 .probono-title-h3 {
   margin-bottom: 32px;
   font-weight: 700;
