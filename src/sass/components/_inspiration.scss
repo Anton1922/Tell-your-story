@@ -1,0 +1,29 @@
+.story-inspiration {
+	margin-top: 73px;
+
+	&__title {
+		text-align: center;
+		font-family: 'IBM Plex Sans';
+		font-weight: 600;
+		font-size: 36px;
+		line-height: 1.31;
+		color: #eca900;
+	}
+
+	&__container-cards {
+		display: flex;
+		margin-top: 54px;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	&__story-card {
+		width: 24%;
+		max-width: 251px;
+		box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.15);
+
+		&:nth-of-type(1n + 5) {
+			margin-top: 54px;
+		}
+	}
+}
