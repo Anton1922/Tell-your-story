@@ -1,0 +1,49 @@
+.story-card {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+
+	&__container-text {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		padding: 26px 5px 18px 20px;
+	}
+
+	&__title {
+		font-family: 'Source Sans Pro';
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 1.25;
+	}
+
+	&__excerpt {
+		margin-top: 14px;
+		font-family: 'IBM Plex Sans';
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 1.29;
+	}
+
+	&__button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: auto 0 28px 20px;
+		width: 150px;
+		height: 35px;
+		font-family: 'IBM Plex Sans';
+		font-style: normal;
+		font-weight: 500;
+		font-size: 15px;
+		line-height: 1.29;
+		color: $text-common-black;
+		background-color: $background-gold-button;
+		transition: all 0.3s linear;
+
+		&:hover {
+			color: $text-white;
+			background-color: $background-gold-button-hover;
+		}
+	}
+}
