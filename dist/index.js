@@ -1,9 +1,45 @@
 'use strict';
+/***Create drag-and-drop element in form 'share story'***/
 
-var form = document.querySelector('.mailpoet_form');
-var inputName = form.querySelector('input[type="text"].mailpoet_text');
-var inputEmail = form.querySelector('input[type="email"].mailpoet_text'); //const buttonContainer = form.querySelector('.mailpoet_paragraph.last');
+var drpopZone = document.querySelector('.story-connect__form');
+console.log('drpopZone', drpopZone);
+var containerButtons = document.querySelector('.story-connect__container-buttons');
+console.log('containerButtons', containerButtons);
+var form = document.querySelector('#story-form');
+console.log('form', form);
+var containerOpacity = 1;
+var formOpacity = 0;
 
-inputName.placeholder = 'Введите имя';
-inputEmail.placeholder = 'Электронная почта'; //buttonContainer.insertAdjacentHTML = ('beforeend', '<div class="join-subscribe__privacy-policy">Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь c <a href="https://less-homeless.com//wp-content/uploads/2020/02/Политика-конфиденциальности.docx" class="join-subscribe__privacy-policy-link" target="_blank" rel="noopener noreferrer">политикой конфиденциальности</a></div>');
+function removeContainer() {
+  if (containerOpacity < 0) {
+    containerButtons.style.display = 'none';
+    return showForm();
+  } else {
+    containerButtons.style.opacity = containerOpacity;
+    containerOpacity -= 0.1;
+    setTimeout(removeContainer, 60);
+  }
+}
+
+function showForm() {
+  form.style.display = 'flex';
+
+  if (formOpacity > 1) {
+    return;
+  } else {
+    form.style.opacity = formOpacity;
+    formOpacity += 0.1;
+    setTimeout(showForm, 60);
+  }
+}
+
+containerButtons.addEventListener('click', function (e) {
+  e.preventDefault();
+  form.style.opacity = 0;
+  var target = e.target;
+
+  if (target.classList.contains('story-connect__button')) {
+    removeContainer();
+  }
+});
 //# sourceMappingURL=index.js.map

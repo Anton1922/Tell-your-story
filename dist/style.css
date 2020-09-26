@@ -606,6 +606,11 @@ input[type=number] {
   color: #000;
 }
 
+.story-connect__wrapper {
+  position: relative;
+  width: 100%;
+}
+
 .story-connect__container-buttons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -613,6 +618,8 @@ input[type=number] {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .story-connect__button {
@@ -698,20 +705,24 @@ input[type=number] {
 }
 
 .story-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin: 50px auto 0 auto;
+  width: 100%;
 }
 
 .story-form__input-wrapper {
   position: relative;
   margin-bottom: 25px;
   width: 40%;
+}
+
+.story-form__input-wrapper:nth-of-type(odd) {
+  margin-right: 10%;
 }
 
 .story-form__check-logo,
@@ -723,8 +734,8 @@ input[type=number] {
 
 .story-form__check-logo {
   display: none;
-  stroke: #64ea7e;
-  fill: #64ea7e;
+  stroke: #4f7942;
+  fill: #4f7942;
 }
 
 .story-form__cross-logo {
@@ -849,7 +860,8 @@ input[type=number] {
 }
 
 .story-form__textarea-wrapper {
-  width: 60%;
+  margin-bottom: 25px;
+  width: 90%;
 }
 
 .story-form__textarea {
@@ -913,10 +925,10 @@ input[type=number] {
   -webkit-box-align: end;
   -ms-flex-align: end;
   align-items: flex-end;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  width: 20%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 40%;
 }
 
 .story-form__button {
@@ -941,6 +953,19 @@ input[type=number] {
   background-color: #eca900;
   border: none;
   cursor: pointer;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.story-form__button:hover {
+  background-color: #bd8700;
+  color: #fff;
+}
+
+.story-form__drag-drop {
+  background-color: #ffc228;
+  outline-offset: -17px;
 }
 
 .story-inspiration {
